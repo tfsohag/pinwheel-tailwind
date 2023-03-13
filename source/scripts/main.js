@@ -33,22 +33,22 @@ const tabElements = document.querySelectorAll(".tab-element");
 tabs.forEach((tab, index) => {
   tab.addEventListener("click", () => {
     console.log(tabs);
-    // remove active class from all tabs and tab contents
+    // remove active class
     tabs.forEach((tab) => tab.classList.remove("active-tab"));
     tabElements.forEach((tabElement) =>
       tabElement.classList.remove("active-tab")
     );
 
-    // add active class to clicked tab and corresponding tab content
+    // add active clas
     tab.classList.add("active-tab");
     tabElements[index].classList.add("active-tab");
   });
 });
 
-// modal compon
-// Get the modal elements
+
+// modal components
 const modal = document.getElementById("modal");
-const modalOverlay = document.getElementById("modal-container");
+const modalContainer = document.getElementById("modal-container");
 const modalOpenBtn = document.getElementById("modal-open-button");
 const modalCloseBtn = document.getElementById("modal-close-button");
 
