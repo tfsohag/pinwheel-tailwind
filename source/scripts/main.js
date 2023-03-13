@@ -55,17 +55,17 @@ const modalCloseBtn = document.getElementById("modal-close-button");
 // modal open button
 modalOpenBtn.addEventListener("click", () => {
   modal.classList.remove("hidden");
-  modalOverlay.classList.remove("hidden");
+ modalContainer.classList.remove("hidden");
 });
 
 // modal close button
 modalCloseBtn.addEventListener("click", () => {
   modal.classList.add("hidden");
-  modalOverlay.classList.add("hidden");
+ modalContainer.classList.add("hidden");
 });
 
 // Close the modal click on the modal container
 modalOverlay.addEventListener("click", () => {
   modal.classList.add("hidden");
-  modalOverlay.classList.add("hidden");
+ modalContainer.classList.add("hidden");
 });
