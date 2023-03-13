@@ -71,11 +71,16 @@
     }
   }
 }
-
+// tabcomponent
 .active-tab {
-  @apply bg-theme-light dark:bg-theme-dark;
+  @apply rounded-t-lg bg-theme-light text-primary dark:bg-theme-dark;
 }
-
+.tab-element {
+  @apply hidden;
+  &.active-tab {
+    @apply block;
+  }
+}
 // form style
 .form-input,
 .form-textarea {
