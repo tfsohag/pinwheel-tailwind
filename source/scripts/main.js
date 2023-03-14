@@ -45,7 +45,6 @@ tabs.forEach((tab, index) => {
   });
 });
 
-
 // modal components
 const modal = document.getElementById("modal");
 const modalContainer = document.getElementById("modal-container");
@@ -55,17 +54,52 @@ const modalCloseBtn = document.getElementById("modal-close-button");
 // modal open button
 modalOpenBtn.addEventListener("click", () => {
   modal.classList.remove("hidden");
- modalContainer.classList.remove("hidden");
+  modalContainer.classList.remove("hidden");
 });
 
 // modal close button
 modalCloseBtn.addEventListener("click", () => {
   modal.classList.add("hidden");
- modalContainer.classList.add("hidden");
+  modalContainer.classList.add("hidden");
 });
 
 // Close the modal click on the modal container
-modalOverlay.addEventListener("click", () => {
+modalContainer.addEventListener("click", () => {
   modal.classList.add("hidden");
- modalContainer.classList.add("hidden");
+  modalContainer.classList.add("hidden");
+});
+
+// Accordion component
+const accordionButtons = document.querySelectorAll(".accordion-button");
+
+accordionButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // console.log(button.children);
+    const content = button.nextElementSibling;
+    if (content.classList.contains("hidden")) {
+      console.log(button.children[0]);
+      content.classList.remove("hidden", "h-0");
+      content.classList.add("opacity-100", "h-auto");
+      button.children[0].classList.add("rotate-180");
+    } else {
+      content.classList.remove("opacity-100", "h-auto");
+      content.classList.add("opacity-0", "h-0", "overflow-hidden", "hidden");
+      button.children[0].classList.remove("rotate-180");
+    }
+  });
+});
+
+// toast component
+const showToast = () => {
+  const toast = document.getElementById("toast");
+  toast.classList.remove("hidden");
+
+
+  setTimeout(() => {
+    toast.classList.add("hidden");
+  }, 3000);
+};
+const toastButton = document.getElementById("toast-button");
+toastButton.addEventListener("click", () => {
+  showToast();
 });
