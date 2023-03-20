@@ -31,56 +31,59 @@
 .notice {
   .notice-body {
     p {
-      @apply my-0 text-[#666666] dark:text-[#cbcbcb];
+      @apply my-0 text-text dark:text-darkmode-light;
     }
   }
 
   &.note {
     .notice-head {
-      @apply bg-[#6ab0de] dark:bg-[#97d6ffcc];
+      @apply bg-[#7fb6d9] dark:bg-[#6ab0de];
     }
     .notice-body {
-      @apply bg-[rgb(227,244,255)] dark:bg-[#97d6ff26];
+      @apply bg-[#7fb6d9]/25 dark:bg-[#6ab0de]/25;
     }
   }
 
   &.tip {
     .notice-head {
-      @apply bg-[#78c578] dark:bg-[#96ff96cc];
+      @apply bg-[#73e273] dark:bg-[#78c578];
     }
     .notice-body {
-      @apply bg-[#e2ffe2] dark:bg-[#96ff9626];
+      @apply bg-[#73e273]/25 dark:bg-[#78c578]/25;
     }
   }
 
   &.info {
     .notice-head {
-      @apply bg-[#f0b37e] dark:bg-[#ffc392cc];
+      @apply bg-[#ffc392] dark:bg-[#f0b37e];
     }
     .notice-body {
-      @apply bg-[#ffedde] dark:bg-[#ffc39226];
+      @apply bg-[#f0b37e]/25 dark:bg-[#ffc392]/25;
     }
   }
 
   &.warning {
     .notice-head {
-      @apply bg-[#e06f6c] dark:bg-[#ff918ccc];
+      @apply bg-[#ff918c] dark:bg-[#e06f6c];
     }
     .notice-body {
-      @apply bg-[#ffdad8] dark:bg-[#ff918c26];
+      @apply bg-[#ff918c]/25 dark:bg-[#e06f6c]/25;
     }
   }
 }
+
 // tabcomponent
 .active-tab {
   @apply rounded-t-lg bg-theme-light text-primary dark:bg-theme-dark;
 }
+
 .tab-element {
   @apply hidden;
   &.active-tab {
     @apply block;
   }
 }
+
 // form style
 .form-input,
 .form-textarea {
