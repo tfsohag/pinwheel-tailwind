@@ -2,6 +2,8 @@
   @apply inline-block border px-5 py-2 font-medium transition;
 }
 
+
+
 .btn-primary {
   @apply bg-primary text-white;
 }
@@ -11,5 +13,9 @@
 }
 
 .btn-solid-white {
-  @apply bg-white rounded-[50px] px-7 min-w-[150px] text-dark shadow-[0px_15px_34px_rgba(0,0,0,0.1)] border-white text-sm;
+  @apply bg-white rounded-[50px] px-7 min-w-[150px] text-dark shadow-[0px_15px_34px_rgba(0,0,0,0.1)] border-white text-sm h-[52px] leading-[36px];
+}
+
+.btn-sm {
+  @apply h-[42px] leading-[24px];
 }

@@ -8,6 +8,17 @@
   //   document.querySelector(".preloader").style.display = "none";
   // });
 
+  //sticky header
+  const header = document.querySelector(".header");
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    if (scrollY > 0) {
+      header.classList.add("header-sticky");
+    } else {
+      header.classList.remove("header-sticky");
+    }
+  });
+
   // swiper slider
   new Swiper(".swiper", {
     loop: true,

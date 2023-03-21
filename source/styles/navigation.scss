@@ -12,7 +12,12 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .header {
-  @apply sticky top-0 z-50 bg-white py-2;
+  @apply sticky top-0 z-50  py-2 bg-red-50;
+
+  &-sticky {
+    @apply absolute;
+  }
+
 }
 
 // navbar items
